@@ -1,0 +1,34 @@
+<svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="3" cy="4" r="0.75" stroke="white" stroke-width="0.5"/>
+<circle cx="3" cy="7" r="0.75" stroke="white" stroke-width="0.5"/>
+<circle cx="3" cy="10" r="0.75" stroke="white" stroke-width="0.5"/>
+<circle cx="3" cy="14" r="0.75" stroke="white" stroke-width="0.5"/>
+<circle cx="3" cy="17" r="0.75" stroke="white" stroke-width="0.5"/>
+<circle cx="6" cy="4" r="0.75" stroke="white" stroke-width="0.5"/>
+<circle cx="6" cy="7" r="0.75" stroke="white" stroke-width="0.5"/>
+<circle cx="6" cy="10" r="0.75" stroke="white" stroke-width="0.5"/>
+<circle cx="6" cy="14" r="0.75" stroke="white" stroke-width="0.5"/>
+<circle cx="9" cy="4" r="0.75" stroke="white" stroke-width="0.5"/>
+<circle cx="9" cy="7" r="0.75" stroke="white" stroke-width="0.5"/>
+<circle cx="9" cy="10" r="0.75" stroke="white" stroke-width="0.5"/>
+<circle cx="9" cy="14" r="0.75" stroke="white" stroke-width="0.5"/>
+<circle cx="12" cy="4" r="0.75" stroke="white" stroke-width="0.5"/>
+<circle cx="12" cy="7" r="0.75" stroke="white" stroke-width="0.5"/>
+<circle cx="12" cy="10" r="0.75" stroke="white" stroke-width="0.5"/>
+<circle cx="12" cy="14" r="0.75" stroke="white" stroke-width="0.5"/>
+<circle cx="15" cy="4" r="0.75" stroke="white" stroke-width="0.5"/>
+<circle cx="15" cy="7" r="0.75" stroke="white" stroke-width="0.5"/>
+<circle cx="15" cy="10" r="0.75" stroke="white" stroke-width="0.5"/>
+<circle cx="15" cy="14" r="0.75" stroke="white" stroke-width="0.5"/>
+<circle cx="18" cy="4" r="0.75" stroke="white" stroke-width="0.5"/>
+<circle cx="18" cy="7" r="0.75" stroke="white" stroke-width="0.5"/>
+<circle cx="18" cy="10" r="0.75" stroke="white" stroke-width="0.5"/>
+<circle cx="18" cy="14" r="0.75" stroke="white" stroke-width="0.5"/>
+<line x1="20.5" x2="20.5" y2="16" stroke="white"/>
+<line x1="5" y1="16.5" x2="25" y2="16.5" stroke="white"/>
+<line x1="24.5" y1="17" x2="24.5" y2="23" stroke="white"/>
+<line x1="1" y1="22.5" x2="24" y2="22.5" stroke="white"/>
+<line x1="5.5" y1="17" x2="5.5" y2="22" stroke="white"/>
+<line x1="1" y1="0.5" x2="20" y2="0.5" stroke="white"/>
+<line x1="0.5" x2="0.5" y2="23" stroke="white"/>
+</svg>

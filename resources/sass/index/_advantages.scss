@@ -5,6 +5,16 @@
   @media (max-width: 900px){
     justify-content: space-between;
   }
+  &-section{
+    &.section-grey{
+      .advantages-item{
+        background: #FFF;
+        &:hover{
+          background: #006743;
+        }
+      }
+    }
+  }
   &-item {
     display: flex;
     width: 100%;
@@ -93,4 +103,6 @@
   &__tag {
     margin-bottom: 2rem;
   }
+
+
 }

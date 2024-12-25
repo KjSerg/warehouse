@@ -147,7 +147,10 @@ strong {
 }
 
 .section {
-  padding: 5.5rem 0;
+  padding: 5.5rem 0;background: #FFF;
+  &-grey{
+    background: #F7F7F7;
+  }
   @media (max-width: 767px){
     padding: 3rem 0;
   }
@@ -229,6 +232,27 @@ strong {
   &:hover{
     .video-block__button{
       transform: translate(-50%, -50%) scale(0.8);
+    }
+  }
+}
+
+.rating{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &-item{
+    width: 2.4rem;
+    height: 2.4rem;
+    flex-shrink: 0;
+    &.active{
+      svg{
+        path{
+          fill: #006743;
+        }
+      }
+    }
+    &:not(:last-child){
+      margin-right: 1rem;
     }
   }
 }

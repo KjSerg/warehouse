@@ -5,6 +5,7 @@ import Calculator from "./Calculator";
 import {accordion} from "./_accardion";
 import GoogleMap from "./GoogleMap";
 import {fancyboxInit} from "./fancybox-init";
+import Slick from "./Slick";
 
 
 export default class Application {
@@ -68,6 +69,7 @@ export default class Application {
             fancyboxInit();
             const calc = new Calculator();
             const map = new GoogleMap();
+            const sliders = new Slick();
         });
     }
 }

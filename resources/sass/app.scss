@@ -1,7 +1,9 @@
+@import "../../node_modules/slick-carousel/slick/slick";
+@import "../../node_modules/slick-carousel/slick/slick-theme";
+@import "~@fancyapps/fancybox/dist/jquery.fancybox.min.css";
 @import "base/fonts";
 @import "base/reset";
 @import "base/style";
-@import "~@fancyapps/fancybox/dist/jquery.fancybox.min.css";
 @import "base/buttons";
 @import "base/forms";
 @import "header/header";
@@ -15,3 +17,5 @@
 @import "index/connect";
 @import "404/error-page";
 @import "about/main";
+@import "base/slider";
+@import "about/reviews";

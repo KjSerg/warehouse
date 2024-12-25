@@ -60,7 +60,7 @@
     padding: 8rem 0;
     @media (max-width: 600px){
       padding: 3rem 0;
-      padding-bottom: 23rem;
+      padding-bottom: 33rem;
     }
     &__map {
       position: absolute;
@@ -71,7 +71,7 @@
       @media (max-width: 600px){
         bottom: 0;
         top: auto;
-        height: 20rem;
+        height: 30rem;
         width: 100%;
       }
     }
