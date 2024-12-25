@@ -14,7 +14,7 @@ export default class Application {
         this.initSvgAnimation();
         this.initComponents();
         this.removeAnimation = false;
-        this.speed = 0.01;
+        this.speed = 0.1;
     }
 
     initSvgAnimation() {
@@ -23,7 +23,7 @@ export default class Application {
         document.querySelectorAll('.form-label').forEach(function (label) {
             const svg = label.querySelector('.icon svg');
             if (svg) {
-                const paths = svg.querySelectorAll('path');
+                const paths = svg.querySelectorAll('path, line');
                 if (paths) {
                     label.querySelector('input').addEventListener('focus', () => {
                         const timeline = gsap.timeline({

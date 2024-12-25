@@ -39,6 +39,9 @@
     flex-grow: 0;
     border-radius: 2rem;
     overflow: hidden;
+    &--low{
+      height: 40rem;
+    }
     @media (max-width: 1440px){
       margin-right: 4rem;
     }

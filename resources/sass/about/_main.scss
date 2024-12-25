@@ -17,10 +17,12 @@
       font-size: 4rem;
     }
   }
-
   &-section {
     padding: 7rem 0;
     background: #F7F7F7;
+    .head-text{
+      padding-top: 2rem;
+    }
     @media (max-width: 500px) {
       padding: 3rem 0;
     }
@@ -33,6 +35,15 @@
       height: 51.1rem;
       flex-shrink: 0;
       flex-grow: 0;
+      &--to-right{
+        justify-content: flex-end;
+        padding-left: 2rem;
+        @media (max-width: 800px){
+          padding: 0;
+          margin-top: 2rem;
+          justify-content: center;
+        }
+      }
       @media (max-width: 1400px) {
         width: 60rem;
         height: 37rem;

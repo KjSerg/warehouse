@@ -5698,7 +5698,7 @@ var Application = /*#__PURE__*/function () {
     this.initSvgAnimation();
     this.initComponents();
     this.removeAnimation = false;
-    this.speed = 0.01;
+    this.speed = 0.1;
   }
   return _createClass(Application, [{
     key: "initSvgAnimation",
@@ -5708,7 +5708,7 @@ var Application = /*#__PURE__*/function () {
       document.querySelectorAll('.form-label').forEach(function (label) {
         var svg = label.querySelector('.icon svg');
         if (svg) {
-          var paths = svg.querySelectorAll('path');
+          var paths = svg.querySelectorAll('path, line');
           if (paths) {
             label.querySelector('input').addEventListener('focus', function () {
               var timeline = gsap__WEBPACK_IMPORTED_MODULE_7__.gsap.timeline({
@@ -6242,10 +6242,60 @@ var Slick = /*#__PURE__*/function () {
       });
     }
   }, {
+    key: "gallerySliderInit",
+    value: function gallerySliderInit() {
+      $(document).find('.gallery').each(function () {
+        var $slider = $(this);
+        var $prev = $(this).closest('section').find('.slick__prev');
+        var $next = $(this).closest('section').find('.slick__next');
+        var $progress = $(this).closest('section').find('.slider-progress');
+        $slider.slick({
+          slidesToShow: 4,
+          centerMode: true,
+          arrows: true,
+          prevArrow: $prev,
+          nextArrow: $next,
+          dots: true,
+          appendDots: $progress,
+          responsive: [{
+            breakpoint: 2000,
+            settings: {
+              slidesToShow: 3
+            }
+          }, {
+            breakpoint: 1441,
+            settings: {
+              centerMode: false,
+              slidesToShow: 3
+            }
+          }, {
+            breakpoint: 901,
+            settings: {
+              centerMode: false,
+              slidesToShow: 2
+            }
+          }, {
+            breakpoint: 769,
+            settings: {
+              centerMode: true,
+              slidesToShow: 1
+            }
+          }, {
+            breakpoint: 361,
+            settings: {
+              centerMode: false,
+              slidesToShow: 1
+            }
+          }]
+        });
+      });
+    }
+  }, {
     key: "init",
     value: function init() {
       this.aboutSliderInit();
       this.reviewsSliderInit();
+      this.gallerySliderInit();
     }
   }]);
 }();

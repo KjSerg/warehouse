@@ -93,11 +93,65 @@ export default class Slick {
             });
         });
     }
+    gallerySliderInit() {
+        $(document).find('.gallery').each(function () {
+            const $slider = $(this);
+            const $prev = $(this).closest('section').find('.slick__prev');
+            const $next = $(this).closest('section').find('.slick__next');
+            const $progress = $(this).closest('section').find('.slider-progress');
+            $slider.slick({
+                slidesToShow: 4,
+                centerMode: true,
+                arrows: true,
+                prevArrow: $prev,
+                nextArrow: $next,
+                dots: true,
+                appendDots: $progress,
+                responsive: [
+                    {
+                        breakpoint: 2000,
+                        settings: {
+                            slidesToShow: 3
+                        }
+                    },
+                    {
+                        breakpoint: 1441,
+                        settings: {
+                            centerMode: false,
+                            slidesToShow: 3
+                        }
+                    },
+                    {
+                        breakpoint: 901,
+                        settings: {
+                            centerMode: false,
+                            slidesToShow: 2
+                        }
+                    },
+                    {
+                        breakpoint: 769,
+                        settings: {
+                            centerMode: true,
+                            slidesToShow: 1
+                        }
+                    },
+                    {
+                        breakpoint: 361,
+                        settings: {
+                            centerMode: false,
+                            slidesToShow: 1
+                        }
+                    },
+                ]
+            });
+        });
+    }
 
 
     init() {
         this.aboutSliderInit();
         this.reviewsSliderInit();
+        this.gallerySliderInit();
     }
 }
 

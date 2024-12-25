@@ -150,6 +150,10 @@ strong {
   padding: 5.5rem 0;background: #FFF;
   &-grey{
     background: #F7F7F7;
+    .tag {
+      background-color: rgba(#fff, 0);
+      border: 1px solid #006743;
+    }
   }
   @media (max-width: 767px){
     padding: 3rem 0;
@@ -202,6 +206,9 @@ strong {
   font-style: normal;
   font-weight: 600;
   line-height: 140%;
+  &--center{
+    text-align: center;
+  }
   @media (max-width: 1440px){
     font-size: 3.4rem;
   }
