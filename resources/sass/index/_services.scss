@@ -1,0 +1,202 @@
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+
+  &-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 3rem;
+    width: calc(33.3% - 2rem);
+    border-radius: 2rem;
+    background: #F4F4F4;
+    border: 1px solid rgba(0, 0, 0, 0);
+    transition: 0.2s ease-in-out;
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0);
+    @media (max-width: 1024px) {
+      padding: 2rem;
+    }
+    @media (max-width: 900px) {
+      width: calc(50% - 1rem);
+    }
+    @media (max-width: 600px) {
+      width: 100%;
+    }
+
+    &__link {
+      margin-top: 2rem;
+      display: inline-flex;
+      align-items: center;
+      padding: 1rem 0;
+      border-bottom: 1px solid #000;
+      color: #000;
+      font-size: 1.8rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      letter-spacing: 0.09rem;
+      text-transform: uppercase;
+      transition: 0.5s ease-in-out;
+      @media (max-width: 1024px) {
+        font-size: 1.6rem;
+        padding: 0.5rem 0;
+      }
+
+      .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2rem;
+        height: 2rem;
+        margin-left: 1rem;
+        @media (max-width: 1024px) {
+          width: 1.8rem;
+          height: 1.8rem;
+        }
+      }
+
+      &:hover {
+        border-color: #007B50;
+        color: #007B50;
+
+        .icon {
+          svg {
+            path {
+              fill: #007B50;
+            }
+          }
+        }
+      }
+    }
+
+    &__text {
+      margin-bottom: auto;
+
+      ul li {
+        position: relative;
+        padding-left: 2.8rem;
+
+        &:not(:last-child) {
+          margin-bottom: 1rem;
+        }
+
+        &:before {
+          position: absolute;
+          display: block;
+          content: '';
+          left: 5px;
+          top: 1rem;
+          width: 6px;
+          height: 6px;
+          transform: rotate(45deg);
+          background-color: #006743;
+        }
+      }
+    }
+
+    &__subtitle {
+      margin-bottom: 2rem;
+      color: #000;
+      font-size: 2.4rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 160%;
+      @media (max-width: 1024px) {
+        font-size: 1.8rem;
+        margin-bottom: 1.6rem;
+      }
+    }
+
+    &__title {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      color: #000;
+      font-size: 2.6rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 150%;
+      @media (max-width: 1024px) {
+        font-size: 2rem;
+        margin-bottom: 1.6rem;
+      }
+    }
+
+    &__icon {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.2rem;
+      width: 6.4rem;
+      height: 6.4rem;
+      border-radius: 50%;
+
+      svg {
+        path {
+          fill: #006743;
+        }
+      }
+
+      &:after {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 8rem;
+        height: 8rem;
+        top: 50%;
+        left: 50%;
+        background-size: contain;
+        transform: translate(-50%, - 50%);
+        animation: bg-rotate 40s linear infinite;
+      }
+    }
+
+    &:hover {
+      box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.2);
+      border-color: rgba(0, 0, 0, 0.10);
+
+      .services-item__icon {
+        background-color: #007B50;
+
+        svg {
+          path {
+            fill: #fff;
+          }
+        }
+      }
+
+    }
+  }
+
+  &__tag {
+    margin-bottom: 2rem;
+  }
+
+  &-head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+    @media (max-width: 1024px) {
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    margin-right: 2rem;
+    @media (max-width: 1024px) {
+      margin-right: 0;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+@keyframes bg-rotate {
+  0% {
+    transform: translate(-50%, - 50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, - 50%) rotate(360deg);
+  }
+}

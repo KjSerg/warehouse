@@ -1,0 +1,26 @@
+
+.button, button:not(.fancybox-button) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20rem;
+  padding: 1rem;
+  border-radius: 3rem;
+  background: #006743;
+  border: 1px solid #006743;
+  font-family: "Inter", serif;
+  color: #FFF;
+  text-align: center;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.09rem;
+  text-transform: uppercase;
+  outline: none;
+  cursor: pointer;
+  &:hover {
+    background: #fff;
+    color: #006743;
+  }
+}
