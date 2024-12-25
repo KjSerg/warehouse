@@ -131,7 +131,6 @@ section {
   position: relative;
 }
 
-
 .container {
   width: 100%;
   max-width: 160rem;
@@ -153,6 +152,12 @@ strong {
     .tag {
       background-color: rgba(#fff, 0);
       border: 1px solid #006743;
+    }
+  }
+  &:first-child:not(.head-section, .main-section){
+    padding-top: 11rem;
+    @media (max-width: 500px){
+      padding-top: 5rem;
     }
   }
   @media (max-width: 767px){

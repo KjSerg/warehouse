@@ -1,0 +1,112 @@
+.price-list {
+  &-item {
+    display: flex;
+    align-items: center;
+    color: #000;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%;
+
+    & > *:first-child{
+      @media (max-width: 767px){
+        max-width: 50%;
+      }
+      @media (max-width: 500px){
+        max-width: 100%;
+      }
+      &:after{
+        @media (max-width: 500px){
+          content: ':';
+        }
+      }
+    }
+    @media (max-width: 1100px){
+      font-size: 2rem;
+    }
+    @media (max-width: 768px){
+      font-size: 1.8rem;
+    }
+    @media (max-width: 500px){
+      flex-direction: column;
+      align-items: flex-start;
+      border-bottom: 1px dashed rgba(0, 0, 0, 0.70);
+    }
+    &__value{
+      color: #006743;
+      text-align: right;
+      @media (max-width: 500px){
+        margin-top: 1rem;
+        width: 100%;
+        font-size: 2.2rem;
+      }
+    }
+    .line {
+      display: block;
+      height: 1px;
+      flex: 1;
+      margin: 0 2rem;
+      border-bottom: 1px dashed rgba(0, 0, 0, 0.70);
+      @media (max-width: 1100px){
+        margin: 0 1rem;
+      }
+      @media (max-width: 500px){
+        display: none;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+      @media (max-width: 1100px){
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  &-box {
+    padding: 5rem;
+    border-radius: 3rem;
+    background: #FFF;
+    @media (max-width: 1100px){
+      padding: 2rem;
+    }
+    @media (max-width: 500px){
+      padding: 1.6rem;
+      border-radius: 1.6rem;
+    }
+    &:not(:last-child) {
+      margin-bottom: 4rem;
+      @media (max-width: 1100px){
+        margin-bottom: 2rem;
+      }
+    }
+    &__title {
+      margin-bottom: 3rem;
+      color: #000;
+      font-size: 2.6rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 150%;
+    }
+  }
+
+  &-section {
+    &-head {
+      margin-bottom: 5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      width: 100%;
+      @media (max-width: 1024px) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      @media (max-width: 768px){
+        margin-bottom: 3rem;
+      }
+      &-column {
+        margin-right: 2rem;
+      }
+    }
+  }
+}
