@@ -192,6 +192,70 @@
   }
 }
 
+.service-modal-window{
+  &-price-list{
+    &-item{
+      display: flex;
+      align-items: center;
+      color: #000;
+      font-size: 1.8rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%;
+      @media (max-width: 500px){
+        flex-direction: column;
+        align-items: flex-start;
+        border-bottom: 1px dashed rgba(0, 0, 0, 0.70);
+      }
+      & > *:first-child{
+        @media (max-width: 767px){
+          max-width: 50%;
+        }
+        @media (max-width: 500px){
+          max-width: 100%;
+        }
+        &:after{
+          @media (max-width: 500px){
+            content: ':';
+          }
+        }
+      }
+      &__value{
+        text-align: right;
+        @media (max-width: 500px){
+          margin-top: 1rem;
+          width: 100%;
+          font-size: 2.2rem;
+        }
+      }
+      .line {
+        display: block;
+        height: 1px;
+        flex: 1;
+        margin: 0 2rem;
+        border-bottom: 1px dashed rgba(0, 0, 0, 0.70);
+        @media (max-width: 1100px){
+          margin: 0 1rem;
+        }
+        @media (max-width: 500px){
+          display: none;
+        }
+      }
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  &__button{
+    margin-left: auto;
+  }
+  &-controls{
+    margin-top: 2.5rem;
+    margin-bottom: 0!important;
+    display: flex;
+  }
+}
+
 @keyframes bg-rotate {
   0% {
     transform: translate(-50%, - 50%) rotate(0deg);
