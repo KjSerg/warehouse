@@ -5697,8 +5697,9 @@ var Application = /*#__PURE__*/function () {
     this.$doc = $(document);
     this.initSvgAnimation();
     this.initComponents();
-    this.removeAnimation = false;
+    this.removeAnimation = true;
     this.speed = 0.1;
+    this.speedQuickly = 0.01;
   }
   return _createClass(Application, [{
     key: "initSvgAnimation",
@@ -5721,7 +5722,7 @@ var Application = /*#__PURE__*/function () {
               var delay = 0;
               paths.forEach(function (path, index) {
                 var length = path.getTotalLength();
-                var duration = t.speed;
+                var duration = paths.length > 15 ? t.speedQuickly : t.speed;
                 path.style.strokeDasharray = length;
                 path.style.strokeDashoffset = length;
                 timeline.to(path, {
@@ -5756,10 +5757,10 @@ var Application = /*#__PURE__*/function () {
         (0,_accardion__WEBPACK_IMPORTED_MODULE_3__.accordion)();
         (0,_fancybox_init__WEBPACK_IMPORTED_MODULE_5__.fancyboxInit)();
         var calc = new _Calculator__WEBPACK_IMPORTED_MODULE_2__["default"]();
-        var sliders = new _Slick__WEBPACK_IMPORTED_MODULE_6__["default"]();
       });
       document.addEventListener('DOMContentLoaded', function () {
         new _GoogleMap__WEBPACK_IMPORTED_MODULE_4__["default"]();
+        var sliders = new _Slick__WEBPACK_IMPORTED_MODULE_6__["default"]();
       });
     }
   }]);
@@ -5894,7 +5895,7 @@ var GoogleMap = /*#__PURE__*/function () {
       if (markerIcon) {
         markerData.icon = markerIcon;
       }
-      new google.maps.Marker(markerData); // Додаємо маркер на карту
+      new google.maps.Marker(markerData);
     }
   }, {
     key: "getMapStyles",

@@ -13,8 +13,9 @@ export default class Application {
         this.$doc = $(document);
         this.initSvgAnimation();
         this.initComponents();
-        this.removeAnimation = false;
+        this.removeAnimation = true;
         this.speed = 0.1;
+        this.speedQuickly = 0.01;
     }
 
     initSvgAnimation() {
@@ -34,7 +35,7 @@ export default class Application {
                         let delay = 0;
                         paths.forEach((path, index) => {
                             const length = path.getTotalLength();
-                            let duration = t.speed;
+                            let duration = paths.length > 15 ? t.speedQuickly : t.speed;
                             path.style.strokeDasharray = length;
                             path.style.strokeDashoffset = length;
                             timeline.to(path, {
@@ -68,10 +69,10 @@ export default class Application {
             accordion();
             fancyboxInit();
             const calc = new Calculator();
-            const sliders = new Slick();
         });
         document.addEventListener('DOMContentLoaded', () => {
             new GoogleMap();
+            const sliders = new Slick();
         });
     }
 }

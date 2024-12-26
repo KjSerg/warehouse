@@ -71,7 +71,7 @@ export default class GoogleMap {
             markerData.icon = markerIcon;
         }
 
-        new google.maps.Marker(markerData); // Додаємо маркер на карту
+        new google.maps.Marker(markerData);
     }
 
     getMapStyles() {
