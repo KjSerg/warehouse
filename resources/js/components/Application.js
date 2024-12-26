@@ -68,8 +68,10 @@ export default class Application {
             accordion();
             fancyboxInit();
             const calc = new Calculator();
-            const map = new GoogleMap();
             const sliders = new Slick();
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+            new GoogleMap();
         });
     }
 }
