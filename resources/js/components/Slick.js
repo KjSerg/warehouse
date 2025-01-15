@@ -49,6 +49,7 @@ export default class Slick {
             });
         });
     }
+
     reviewsSliderInit() {
         $(document).find('.reviews-slider').each(function () {
             const $slider = $(this);
@@ -93,6 +94,7 @@ export default class Slick {
             });
         });
     }
+
     gallerySliderInit() {
         $(document).find('.gallery').each(function () {
             const $slider = $(this);
@@ -100,6 +102,7 @@ export default class Slick {
             const $next = $(this).closest('section').find('.slick__next');
             const $progress = $(this).closest('section').find('.slider-progress');
             $slider.slick({
+                lazyLoad: 'ondemand',
                 slidesToShow: 4,
                 centerMode: true,
                 arrows: true,
@@ -143,6 +146,14 @@ export default class Slick {
                         }
                     },
                 ]
+            });
+        });
+    }
+
+    gallerySliderRefresh() {
+        $(window).on('load', function () {
+            $(document).find('.gallery').each(function () {
+                $(this).slick('refresh');
             });
         });
     }

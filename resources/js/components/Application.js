@@ -69,10 +69,11 @@ export default class Application {
             accordion();
             fancyboxInit();
             const calc = new Calculator();
+            const sliders = new Slick();
+            sliders.gallerySliderRefresh();
         });
         document.addEventListener('DOMContentLoaded', () => {
             new GoogleMap();
-            const sliders = new Slick();
         });
     }
 }

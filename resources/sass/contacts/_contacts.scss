@@ -37,14 +37,14 @@
         gap: 2rem 1rem;
         justify-content: space-between;
         align-items: center;
-        &-label{
-          button{
-            margin-left: auto;
-            background: #288F6B;
-            &:hover{
-              background: #fff;
-            }
+        button{
+          margin-left: auto;
+          background: #288F6B;
+          &:hover{
+            background: #fff;
           }
+        }
+        &-label{
           &.half{
             @media (max-width: 768px){
               width: 100%;
